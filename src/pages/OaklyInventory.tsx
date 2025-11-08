@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {
   Package,
   Search,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  Filter,
   Download,
   Upload,
   Plus,

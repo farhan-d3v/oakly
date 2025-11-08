@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {   BarChart, Bar, PieChart,  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { TrendingUp, TrendingDown, DollarSign, Package, ShoppingCart, AlertCircle, Users, Factory } from 'lucide-react';
+import { useState } from 'react';
 
 export default function OaklyAnalytics() {
   const [timeRange, setTimeRange] = useState('7days');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  //const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Sample data for sales over time
   const salesData = [
@@ -205,7 +206,8 @@ export default function OaklyAnalytics() {
             <h2 className="text-xl font-bold text-gray-900 mb-6">Sales by Category</h2>
             <ResponsiveContainer width="100%" height={280}>
               <PieChart>
-                <Pie
+                 {/* 
+                  <Pie
                   data={categoryData}
                   cx="50%"
                   cy="50%"
@@ -214,11 +216,12 @@ export default function OaklyAnalytics() {
                   outerRadius={90}
                   fill="#8884d8"
                   dataKey="value"
-                >
+                > 
+               
                   {categoryData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
-                </Pie>
+                </Pie>*/}
                 <Tooltip formatter={(value) => `${value}%`} />
               </PieChart>
             </ResponsiveContainer>
@@ -234,6 +237,7 @@ export default function OaklyAnalytics() {
               ))}
             </div>
           </div>
+
 
 
           {/* Inventory Status */}
@@ -302,7 +306,9 @@ export default function OaklyAnalytics() {
         </div>
 
 
-         <div className="h-5 sm:h-9"></div>
+                 <div className="h-5 sm:h-9"></div>
+
+
 
         {/* Customer Segments */}
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
@@ -326,8 +332,7 @@ export default function OaklyAnalytics() {
           </ResponsiveContainer>
         </div>
 
-
-         <div className="h-5 sm:h-9"></div>
+                 <div className="h-5 sm:h-9"></div>
 
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -350,7 +355,7 @@ export default function OaklyAnalytics() {
             <p className="text-green-100 text-sm mt-2">+5.2% from last week</p>
           </div>
         </div>
-                 <div className="h-5 sm:h-9"></div>
+                         <div className="h-5 sm:h-9"></div>
 
       </div>
     </div>

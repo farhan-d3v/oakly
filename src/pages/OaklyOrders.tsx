@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   ShoppingCart,
   Search,
-  Filter,
   Download,
   Plus,
   Eye,
@@ -13,15 +12,12 @@ import {
   Clock,
   XCircle,
   Package,
-  Calendar,
   DollarSign,
   User,
   Phone,
   Mail,
   MapPin,
   FileText,
-  MoreVertical,
-  ChevronDown,
   AlertCircle
 } from 'lucide-react';
 
@@ -56,7 +52,7 @@ const OaklyOrders: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [selectedCustomerType, setSelectedCustomerType] = useState('All');
-  const [dateFilter, setDateFilter] = useState('All Time');
+  //const [dateFilter, setDateFilter] = useState('All Time');
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [showOrderDetail, setShowOrderDetail] = useState(false);
 
